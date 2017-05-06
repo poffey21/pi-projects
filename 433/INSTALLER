@@ -1,0 +1,28 @@
+-- wiringPi
+git clone git://git.drogon.net/wiringPi
+
+cd wiringPi
+./build
+
+
+cd wiringPi
+make
+cd ..
+
+sudo su
+./build
+
+-- 433Utils
+git clone --recursive https://github.com/ninjablocks/433Utils.git
+cd 433Utils/RPi_utils
+make codesend
+make RFSniffer
+make send
+
+
+# RUNNING LISTENER
+cd 433/RPi_utils
+sudo ./RFSniffer
+Bcodes
+### you should see codes and then record those in 
+
