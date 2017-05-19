@@ -11,4 +11,12 @@ Features
 popup window when connected to AP.
 - Enables users to add/remove/edit Access Points.
 
+### Installation ###
 
+Install requirements_sys.txt via the OS Package Manager
+
+```
+virtualenv env
+pip install -r requirements.txt
+sudo env/bin/hostapd configure
+```

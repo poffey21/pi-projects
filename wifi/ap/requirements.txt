@@ -1,0 +1,3 @@
+https://github.com/prahladyeri/hotspotd/raw/master/dist/hotspotd-latest.tar.gz
+Django
+

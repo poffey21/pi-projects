@@ -1,0 +1,8 @@
+# Requirements needed for system.
+
+
+dnsmasq
+hostapd
+python
+virtualenv
+
