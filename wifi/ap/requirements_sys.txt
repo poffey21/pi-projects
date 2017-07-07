@@ -1,8 +1,14 @@
 # Requirements needed for system.
 
+sudo apt-get install dnsmasq hostapd python virtualenv iptables iptables-persistent
 
-dnsmasq
-hostapd
-python
-virtualenv
+dnsmasq - used as a DHCP Daemon
+hostapd - used as an Access Point
+python  - Used to serve a UI to find a new network
+virtualenv - Used to isolate the python web interface.
+rfkill - used to manage hardware switch for WiFi Card??
+    `rfkill unblock 0` - ran this... not sure if it does anything
+    https://seravo.fi/2014/create-wireless-access-point-hostapd
+
+iptables - Used to route traffic between network devices.
 
