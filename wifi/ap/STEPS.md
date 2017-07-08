@@ -10,5 +10,7 @@ iwlist wlan0 scan
 # Current SSID
 iwgetid -r
 
+# DNS will break with dnsmasq turned on
+sudo systemctl stop dnsmasq
 ```
 
