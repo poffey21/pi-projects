@@ -5,8 +5,8 @@ which enables users connect to the Raspberry Pi when
 it has not found a viable Wireless Connection in order
 to add/edit connections.
 
-Features
-externalfile:gbheifiifcfekkamhepkeogobihicgmn:sftpfs:%2F%2F192%2E168%2E0%2E6:22%2Fpi:af65782add6e197fabccba3870129228318e7e7e/home/pi/pi-projects/wifi/ap/requirements_sys.txt
+Planned Features
+
 - Uses the iOS 'Login Required' functionality to auto-
 popup window when connected to AP.
 - Enables users to add/remove/edit Access Points.
@@ -45,4 +45,43 @@ zcat /usr/share/doc/hostapd/examples/hostapd.conf.gz | sudo tee -a /etc/hostapd/
 # Troubleshooting...
 # - Validate that the following is in /etc/default/hostapd
 DAEMON_CONF="/etc/hostapd/hostapd.conf"
+
 ```
+
+**hostapd**
+
+```
+
+# Troubleshooting...
+# - getting the edimax usb driver to work.
+[tutorial](https://www.daveconroy.com/turn-your-raspberry-pi-into-a-wifi-hotspot-with-edimax-nano-usb-ew-7811un-rtl8188cus-chipset/)
+```
+
+**network interfaces**
+
+```
+
+# restart particular interface
+sudo ifdown wlan0
+
+# restart all interfaces
+/etc/init.d/networking restart
+```
+
+
+## Sources
+
+[Restarting Network Interfaces](http://ccm.net/faq/1141-restart-network-interface-using-command-lines-in-linux)
+
+[Getting Edimax to work](https://www.daveconroy.com/turn-your-raspberry-pi-into-a-wifi-hotspot-with-edimax-nano-usb-ew-7811un-rtl8188cus-chipset/)
+
+http://www.pihomeserver.fr/en/2014/05/22/raspberry-pi-home-server-creer-hot-spot-wifi-captive-portal/
+
+https://learn.adafruit.com/setting-up-a-raspberry-pi-as-a-wifi-access-point/install-software
+
+https://www.the-hawkes.de/dnsmasq-a-local-dnsdhcp-server-on-raspberry-pi.html
+
+http://www.elinux.org/RPI-Wireless-Hotspot
+
+https://seravo.fi/2014/create-wireless-access-point-hostapd
+
