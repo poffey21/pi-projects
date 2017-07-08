@@ -42,14 +42,15 @@ sudo systemctl restart dnsmasq
 # reset config
 
 # Troubleshooting...
-
+# - verify config is correct
+dnsmasq --test
 ```
 
 **hostapd**
 
 ```
 # config file
-/etc/dnsmasq.conf
+/etc/hostapd/hostapd.conf
 
 # set it as a service
 # - Validate that the following is in /etc/default/hostapd
@@ -66,20 +67,11 @@ zcat /usr/share/doc/hostapd/examples/hostapd.conf.gz | sudo tee -a /etc/hostapd/
 
 # Troubleshooting...
 # - getting the edimax usb driver to work.
-[tutorial](https://www.daveconroy.com/turn-your-raspberry-pi-into-a-wifi-hotspot-with-edimax-nano-usb-ew-7811un-rtl8188cus-chipset/)
+https://www.daveconroy.com/turn-your-raspberry-pi-into-a-wifi-hotspot-with-edimax-nano-usb-ew-7811un-rtl8188cus-chipset/
 
 # - Validate that the following is in /etc/default/hostapd
 DAEMON_CONF="/etc/hostapd/hostapd.conf"
 
-```
-
-**hostapd**
-
-```
-
-# Troubleshooting...
-# - getting the edimax usb driver to work.
-[tutorial](https://www.daveconroy.com/turn-your-raspberry-pi-into-a-wifi-hotspot-with-edimax-nano-usb-ew-7811un-rtl8188cus-chipset/)
 ```
 
 **network interfaces**
