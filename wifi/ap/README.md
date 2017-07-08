@@ -31,10 +31,10 @@ sudo env/bin/hostapd configure
 /etc/dnsmasq.conf
 
 # start service
-service hostapd start
+sudo systemctl start dnsmasq
 
 # restart service
-/etc/init.d/dnsmasq restart
+sudo systemctl restart dnsmasq
 
 # log files
 /var/log/dnsmasq.log
@@ -51,6 +51,16 @@ DAEMON_CONF="/etc/hostapd/hostapd.conf"
 **hostapd**
 
 ```
+# config file
+/etc/dnsmasq.conf
+
+# set it as a service
+
+# start service
+sudo systemctl start hostapd
+
+# restart service
+sudo systemctl restart hostapd
 
 # Troubleshooting...
 # - getting the edimax usb driver to work.
