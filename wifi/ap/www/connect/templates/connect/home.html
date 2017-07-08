@@ -1,0 +1,11 @@
+<html>
+<body>
+Here are the number of Connections Available:
+
+<ul>
+{% for network in ssid_list %}
+{% if network.ESSID %}<li>{{ network.ESSID }}</li>{% endif %}
+{% endfor %}
+</ul>
+</body>
+</html>

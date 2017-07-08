@@ -17,7 +17,7 @@ import environ
 root = environ.Path(__file__) - 3 # three folder back (/a/b/c/ - 3 = /)
 env = environ.Env(
     DJANGO_DEBUG=(bool, False),
-    DJANGO_ALLOWED_HOSTS=(list, None),
+    DJANGO_ALLOWED_HOSTS=(list, []),
 ) # set default values and casting
 environ.Env.read_env() # reading .env file
 
@@ -36,7 +36,6 @@ DEBUG = env('DJANGO_DEBUG')
 
 ALLOWED_HOSTS = env('DJANGO_ALLOWED_HOSTS')
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -48,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Third Party
     # Homegrown
+    'connect',
 ]
 
 MIDDLEWARE = [
